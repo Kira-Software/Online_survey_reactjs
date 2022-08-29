@@ -35,8 +35,8 @@ const Headerhome = ({ login }) => {
   return (
     <Fragment>
       <AppBar
-        style={{ position: "fixed" }}
-        style={{ backgroundColor: "black" }}
+        style={{ position: "fixed",backgroundColor: "black" }}
+        // style={{  }}
       >
         <Toolbar>
           <Typography variant="h3" style={{ marginLeft: 30, flexGrow: 1 }}>
