@@ -26,7 +26,7 @@ const Surveypreview = ({ getmysurvey, deletemysurvey, mysurvey, loading }) => {
   return (
     <Fragment>
       <Tabbar value={0} />
-      <Grid position="static" container>
+      <Grid position="static" container style={{minHeight: "100vh"}}>
         <Grid item xs={10}>
           {" "}
           <br />
