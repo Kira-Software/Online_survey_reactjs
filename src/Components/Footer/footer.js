@@ -25,7 +25,7 @@ const footer = props => {
         <Grid item xs={6} sm={4} md={3} lg={2} xl={2}>
           <NavLink to="#">
             <YouTubeIcon style={style} color="secondary" />
-          </NavLink>
+          </NavLink>*/}
         </Grid>
      
         <Grid item xs={6} sm={4} md={3} lg={2} xl={2}>

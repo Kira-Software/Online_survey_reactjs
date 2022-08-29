@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import {
   AppBar,
   Typography,
@@ -25,7 +25,7 @@ const tabbar = (props) => {
     <Fragment>
       <Grid container>
         <Grid item>
-          <AppBar style={{ backgroundColor: "black" }}>
+          <AppBar style={{ backgroundColor: "#b6932f", height: "100px" }}>
             <Toolbar>
               <Grid container>
                 <Grid item xs={2} sm={2} md={2} lg={1} xl={1}>
@@ -35,12 +35,11 @@ const tabbar = (props) => {
                 </Grid>
 
                 <Grid item xs={6} sm={6} md={6} lg={3} xl={4}>
-                  <Typography
-                    variant="h3"
-                    //style={{ marginLeft: 30, flexGrow: 1 }}
-                  >
-                    Survey site
-                  </Typography>
+                <Link to="/home" style={{textDecoration: "none"}}>
+              <Typography variant="h3" style={{color: "white"}}>
+                Survey Site
+              </Typography>
+              </Link>
                 </Grid>
 
                 <Grid item xs={4} sm={4} md={2} lg={3} xl={2}>
