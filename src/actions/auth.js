@@ -22,7 +22,7 @@ export const loaduser = () => async dispatch => {
   }
 
   try {
-    const res = await axios.get("/api/auth");
+    const res = await axios.get("https://survey-express-project.herokuapp.com/api/auth");
     dispatch({
       type: USER_LOADED,
       payload: res.data
@@ -61,7 +61,7 @@ export const register = ({
 
   try {
     //  console.log("i am in the try");
-    const res = await axios.post("/api/user", body, config);
+    const res = await axios.post("https://survey-express-project.herokuapp.com/api/user", body, config);
 
     dispatch({
       type: REGISTER_SUCCESS,
@@ -117,7 +117,7 @@ export const updateuser = ({
 
   try {
     // console.log("i am in the update try");
-    const res = await axios.post("/api/updateprofile", body, config);
+    const res = await axios.post("https://survey-express-project.herokuapp.com/api/updateprofile", body, config);
 
     // dispatch({
     //   type: REGISTER_SUCCESS,
@@ -163,7 +163,7 @@ export const login = (username, password) => async dispatch => {
 
   try {
     //console.log("i am in the login try");
-    const res = await axios.post("/api/auth", body, config);
+    const res = await axios.post("https://survey-express-project.herokuapp.com/api/auth", body, config);
     // console.log("the res.data value is that ",res.data)
 
     dispatch({
@@ -234,7 +234,7 @@ export const addsurvey = ({
 
   try {
     //   console.log("inside try myquestion is", myquestion);
-    const res = await axios.post("/api/survey", body, config);
+    const res = await axios.post("https://survey-express-project.herokuapp.com/api/survey", body, config);
 
     // dispatch({
     //   type: LOGIN_SUCCESS,
@@ -260,7 +260,7 @@ export const getmysurvey = () => async dispatch => {
   //  console.log("inside the getmysurvey action");
   //dispatch(loaduser());
   try {
-    const res = await axios.get(`/api/survey`);
+    const res = await axios.get(`https://survey-express-project.herokuapp.com/api/survey`);
     //  console.log("the result of my survey in action is", res.data);
 
     dispatch({
@@ -284,7 +284,7 @@ export const getsurveytofill = () => async dispatch => {
   // console.log("inside the getsurveytofill action");
 
   try {
-    const res = await axios.get(`/api/givemesurvey`);
+    const res = await axios.get(`https://survey-express-project.herokuapp.com/api/givemesurvey`);
 
     dispatch({
       type: GET_MYFILLSURVEY,
@@ -318,7 +318,7 @@ export const addchoice = ({ theqid, myanswers }) => async dispatch => {
 
   try {
     //  console.log("inside try myanswers is", myanswers);
-    const res = await axios.post(`/api/postchoice/${theqid}`, body, config);
+    const res = await axios.post(`https://survey-express-project.herokuapp.com/api/postchoice/${theqid}`, body, config);
 
     dispatch(setalert("Thanks for having your time !!!", "answerres"));
 
@@ -337,7 +337,7 @@ export const getallchoices = () => async dispatch => {
   // console.log("inside the getallchoices action");
 
   try {
-    const res = await axios.get(`/api/issubmitted`);
+    const res = await axios.get(`https://survey-express-project.herokuapp.com/api/issubmitted`);
 
     dispatch({
       type: GET_ALLCHOICE,
@@ -353,7 +353,7 @@ export const deletemysurvey = id => async dispatch => {
   //  console.log("inside the deletemysurvey action");
 
   try {
-    await axios.get(`/api/deletesurvey/${id}`);
+    await axios.get(`https://survey-express-project.herokuapp.com/api/deletesurvey/${id}`);
 
     dispatch(getmysurvey());
   } catch (err) {
